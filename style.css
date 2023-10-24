@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #84ff9f;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  width: 100%;
+  max-width: 1050px;
+}
+
+section {
+  background: #ffffff;
+  border-radius: 7px;
+}
+
+.ferramentas {
+  width: 210px;
+  padding: 15px 22px 0;
+}
+
+.ferramentas .row {
+  margin-bottom: 20px;
+}
+
+.row .opcoes {
+  list-style: none;
+  margin: 10px 0 0 5px;
+}
+
+.row .opcoes .opcao {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.opcao:is(:hover, .active) img {
+  filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg)
+    brightness(100%) contrast(100%);
+}
+
+.opcao:is(:hover, .active) :where(span, label) {
+  color: #ff9668;
+}
+
+.opcao :where(span, label) {
+  color: #5a6168;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.opcao #preenchimento {
+  height: 14px;
+  width: 14px;
+  cursor: pointer;
+}
+
+#preenchimento:checked ~ label {
+  color: #ff9668;
+}
+
+.opcao #barra-rolagem {
+  width: 100%;
+  height: 5px;
+  margin-top: 10px;
+}
+
+.cores .opcoes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cores .opcao {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-top: 3px;
+  background: red;
+  position: relative;
+}
+
+.cores .opcao:nth-child(1) {
+  background-color: #fff;
+  border: 1px solid #bfbfbf;
+}
+
+.cores .opcao:nth-child(2) {
+  background-color: green;
+}
+
+.cores .opcao:nth-child(3) {
+  background-color: blue;
+}
+
+.cores .opcao:nth-child(4) {
+  background-color: red;
+}
+
+.cores .opcao:nth-child(5) {
+  background-color: #000000;
+}
+
+.cores .opcao.selected::before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  top: 50%;
+  left: 50%;
+  background: inherit;
+  border-radius: inherit;
+  border: 2px solid #fff;
+  transform: translate(-50%, -50%);
+}
+
+.cores .opcao:first-child.selected::before {
+  border-color: #ccc;
+}
+
+.opcao #color-picker {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.botoes button {
+  width: 100%;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  padding: 11px 0;
+  margin-bottom: 13px;
+  background: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.botoes .limpar-tela {
+  color: #6c757d;
+  border: 1px solid #6c757d;
+  transition: all 0.3 ease;
+}
+
+.limpar-tela:hover {
+  color: #fff;
+  background: #6c757d;
+}
+
+.botoes .salvar-imagem {
+  background: #84ff9f;
+  border: 1px solid #84ff9f;
+}
+
+.lousa {
+  flex: 1;
+}
+
+.lousa canvas {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lousa Digital</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <section class="ferramentas">
+        <div class="row">
+        <label class="titulo">Formas</label>
+        <ul class="opcoes">
+        <li class="opcao ferramenta" id="retangulo">
+          <img src="./assets/src/rectangle.svg" alt="Retângulo">        
+          <span>Retângulo</span>
+        </li>
+        <li class="opcao ferramenta" id="circulo">
+          <img src="./assets/src/circle.svg" alt="Círculo">
+          <span>Círculo</span>
+        </li>
+        <li class="opcao ferramenta" id="triangulo">
+          <img src="./assets/src/triangle.svg" alt="Triângulo">
+          <span>Triângulo</span>
+        </li>
+        <li class="option">
+          <input type="checkbox" id="preenchimento">
+          <label for ="preenchimento">Preencher cor</label>
+        </li>
+        </ul>
+      </div>
+      <div class="row">
+        <label class="titulo">Opções</label>
+        <ul class="opcoes">
+        <li class="opcao ferramenta active" id="pincel">
+          <img src="./assets/src/brush.svg" alt="Pincel">        
+          <span>Pincel</span>
+        </li>
+        <li class="opcao ferramenta" id="borracha">
+          <img src="./assets/src/eraser.svg" alt="Borracha">
+          <span>Borracha</span>
+        </li>
+        <li class="opcao">
+          <input type="range" id="barra-rolagem" min="1" max="30" value="5">
+        </li>
+        </ul>
+      </div>
+      <div class="row cores">
+        <label class="titulo">Cores</label>
+        <ul class="opcoes">
+          <li class="opcao"></li>
+          <li class="opcao selected"></li>
+          <li class="opcao"></li>
+          <li class="opcao"></li>
+          <li class="opcao">
+            <input type="color" id="color-picker" value="#4A98F7">
+      </div>
+      <div class="row botoes">
+        <button class="limpar-tela">Limpar Tela</button>
+        <button class="salvar-imagem">Salvar Imagem</button>
+      </div>
+      </section>
+      <section class="lousa">
+        <canvas></canvas>
+      </section>
+  </body>
+</html>
